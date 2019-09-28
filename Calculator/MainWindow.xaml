@@ -40,13 +40,15 @@
         </Grid>
         <Canvas>
             <TextBlock Canvas.Left="52" TextWrapping="Wrap" Text="Latitude 1" Canvas.Top="38"/>
-            <TextBox x:Name="txtbox_lat1" Height="23" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="59" Width="198" Text="0" TextChanged="Txtbox_lat1_TextChanged"/>
+            <TextBox x:Name="txtbox_lat1" Height="23" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="59" Width="198" Text="0"
+                     />
             <TextBlock Canvas.Left="52" TextWrapping="Wrap" Text="Longitude 1" Canvas.Top="104"/>
             <TextBox x:Name="txtbox_long1" Height="23" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="125" Width="198" Text="0"/>
             <TextBlock Canvas.Left="52" TextWrapping="Wrap" Text="Longitude 2" Canvas.Top="173"/>
             <TextBox x:Name="txtbox_long2" Height="23" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="194" Width="198" Text="0"/>
             <TextBlock Canvas.Left="315" TextWrapping="Wrap" Text="Distance" Canvas.Top="38"/>
-            <TextBox x:Name="txtbox_distance" Height="23" Canvas.Left="315" TextWrapping="Wrap" Canvas.Top="59" Width="198" Text="0"/>
+            <TextBox x:Name="txtbox_distance" Height="23" Canvas.Left="315" TextWrapping="Wrap" Canvas.Top="59" Width="198"
+                     Text="{Binding ElementName=txtbox_lat1, Path=Text}" />
             <TextBlock Canvas.Left="315" TextWrapping="Wrap" Text="Azimuth" Canvas.Top="104"/>
             <TextBox x:Name="txtbox_azimuth" Height="23" Canvas.Left="315" TextWrapping="Wrap" Canvas.Top="125" Width="198" Text="0"/>
             <TextBlock Canvas.Left="52" TextWrapping="Wrap" Text="Longitude" Canvas.Top="240"/>

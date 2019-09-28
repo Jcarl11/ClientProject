@@ -36,9 +36,5 @@ namespace Calculator
             MessageBox.Show(Convert.ToString(ans));
         }
 
-        private void Txtbox_lat1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            txtbox_distance.Text = txtbox_lat1.Text.ToString();
-        }
     }
 }
