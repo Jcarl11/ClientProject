@@ -32,6 +32,7 @@ namespace Calculator
                 if(latitude1 != value)
                 {
                     latitude1 = value;
+                    
                     OnPropertyChanged();
                 }
             }
@@ -43,6 +44,7 @@ namespace Calculator
                 if (longitude1 != value)
                 {
                     longitude1 = value;
+                    Longitude = computations.computeLongitude(value, Longitude2);
                     OnPropertyChanged();
                 }
             }
@@ -54,6 +56,7 @@ namespace Calculator
                 if (longitude2 != value)
                 {
                     longitude2 = value;
+                    Longitude = computations.computeLongitude(Longitude1, value);
                     OnPropertyChanged();
                 }
             }
@@ -65,6 +68,7 @@ namespace Calculator
                 if (longitude != value)
                 {
                     longitude = value;
+                    Distance = computations.computeDistance(Latitude1, value);
                     OnPropertyChanged();
                 }
             }
@@ -76,6 +80,7 @@ namespace Calculator
                 if (distance != value)
                 {
                     distance = value;
+                    C = computations.computeC(Latitude1, value);
                     OnPropertyChanged();
                 }
             }
@@ -98,6 +103,7 @@ namespace Calculator
                 if (c != value)
                 {
                     c = value;
+                    Azimuth = computations.computeAzimuth(value);
                     OnPropertyChanged();
                 }
             }

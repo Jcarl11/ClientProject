@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Calculator
 {
@@ -9,8 +10,6 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        private Computations computations;
         private Prop prop;
 
         public MainWindow()
@@ -27,11 +26,13 @@ namespace Calculator
 
         private void Btn_calculate_Click(object sender, RoutedEventArgs e)
         {
-            computations = new Computations();
-            double ans = computations.computeDistance(15.1981, -29.1068);
-            Console.WriteLine(ans);
-            MessageBox.Show(Convert.ToString(ans));
+            
         }
 
+        private void Grid_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                DragMove();
+        }
     }
 }
