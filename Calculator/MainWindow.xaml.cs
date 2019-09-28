@@ -9,18 +9,15 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        private double latitude1 = 0;
-        private double longitude1 = 0;
-        private double longitude2 = 0;
-        private double longitude = 0;
-        private double distance = 0;
-        private double azimuth = 0;
+        
         private Computations computations;
-
+        private Prop prop;
 
         public MainWindow()
         {
             InitializeComponent();
+            prop = new Prop();
+            this.DataContext = prop;
         }
 
         private void Btn_close_Click(object sender, RoutedEventArgs e)

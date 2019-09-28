@@ -40,7 +40,8 @@
         </Grid>
         <Canvas>
             <TextBlock Canvas.Left="52" TextWrapping="Wrap" Text="Latitude 1" Canvas.Top="38"/>
-            <TextBox x:Name="txtbox_lat1" Height="23" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="59" Width="198" Text="0" TextChanged="Txtbox_lat1_TextChanged"/>
+            <TextBox x:Name="txtbox_lat1" Height="23" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="59" Width="198" 
+                     Text="{Binding Path=Latitude1, Mode=TwoWay}" TextChanged="Txtbox_lat1_TextChanged"/>
             <TextBlock Canvas.Left="52" TextWrapping="Wrap" Text="Longitude 1" Canvas.Top="104"/>
             <TextBox x:Name="txtbox_long1" Height="23" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="125" Width="198" Text="0"/>
             <TextBlock Canvas.Left="52" TextWrapping="Wrap" Text="Longitude 2" Canvas.Top="173"/>
