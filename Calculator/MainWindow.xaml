@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d" Height="390.092" Width="495.676" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="White"
-        FontSize="12" Foreground="White" FontFamily="Open Sans SemiBold">
+        FontSize="12" Foreground="White" FontFamily="Open Sans SemiBold" FontWeight="Black">
 
     <DockPanel LastChildFill="true" Background="#FF323030">
 
