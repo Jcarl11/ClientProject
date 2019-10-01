@@ -13,6 +13,8 @@ namespace Calculator
         private double distance = 0;
         private double azimuth = 0;
         private double c = 0;
+        private double elevation = 0;
+        private double slantRange = 0;
 
         public Prop()
         {
@@ -76,6 +78,8 @@ namespace Calculator
                 {
                     distance = value;
                     C = computations.computeC(Latitude1, value);
+                    Elevation = computations.computeElevation(value);
+                    SlantRange = computations.computeSlantRange(value);
                     OnPropertyChanged();
                 }
             }
@@ -104,6 +108,33 @@ namespace Calculator
             }
         }
 
+        public double Elevation
+        {
+            get { return elevation; }
+            set
+            {
+                if (elevation != value)
+                {
+                    elevation = value;
+                    
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public double SlantRange
+        {
+            get { return slantRange; }
+            set
+            {
+                if (slantRange != value)
+                {
+                    slantRange = value;
+
+                    OnPropertyChanged();
+                }
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string propertyName = null) 
         {

@@ -30,8 +30,6 @@ namespace Calculator.Tests
         [TestMethod()]
         public void NanTest()
         {
-            // 0.965025188464128 * 0.873714497436967
-            //0.8431564976
             Computations computations = new Computations();
             decimal answer = (decimal)computations.convertToDegrees(Math.Acos(0.8431564976));
             Assert.AreEqual(12.415, answer);
@@ -42,7 +40,17 @@ namespace Calculator.Tests
         {
             Computations computations = new Computations();
             double answer = computations.computeC(15.1981, computations.computeDistance(15.1981, -29.1068));
+
             Assert.AreEqual(115.214431518215, answer);
+        }
+
+        [TestMethod()]
+        public void computeElevationTest()
+        {
+            Computations computations = new Computations();
+            double answer = computations.computeElevation(2.7260);
+
+            Assert.AreEqual(-1.2088, answer);
         }
     }
 }
