@@ -24,10 +24,6 @@ namespace Calculator
             Close();
         }
 
-        private void Btn_calculate_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
         private void Grid_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
