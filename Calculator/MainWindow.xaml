@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
-        mc:Ignorable="d" Height="440" Width="495.676" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="White"
+        mc:Ignorable="d" Height="372.495" Width="494.532" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="White"
         FontSize="12" Foreground="White" FontFamily="Open Sans SemiBold" FontWeight="Black">
 
     <DockPanel LastChildFill="true">
@@ -54,28 +54,27 @@
                      Text="{Binding Path=Longitude2, Mode=TwoWay}"/>
 
 
-            <GroupBox Header="Answers" Height="209" Width="473" Canvas.Left="10" Canvas.Top="158" Foreground="Black" BorderBrush="#FF099AF1" BorderThickness="2">
+            <GroupBox Header="Answers" Height="159" Width="475" Canvas.Left="10" Canvas.Top="158" Foreground="Black" BorderBrush="#FF099AF1" BorderThickness="2">
                 <Canvas>
-                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Longitude" Canvas.Top="9"/>
-                    <TextBox x:Name="txtbox_long" Height="23" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="30" Width="198" 
-                     Text="{Binding Longitude, Mode=TwoWay}" IsReadOnly="True"/>
+                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Longitude" Canvas.Top="133" Visibility="Collapsed"/>
+                    <TextBox x:Name="txtbox_long" Height="23" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="154" Width="198" 
+                     Text="{Binding Longitude, Mode=TwoWay}" IsReadOnly="True" Visibility="Collapsed"/>
+                    <TextBlock Canvas.Left="245" TextWrapping="Wrap" Text="C" Canvas.Top="69" Visibility="Collapsed"/>
+                    <TextBox x:Name="txtbox_C" Height="23" Canvas.Left="245" TextWrapping="Wrap" Canvas.Top="90" Width="198" 
+                     Text="{Binding Path=C, Mode=TwoWay}" IsReadOnly="True" Visibility="Collapsed"/>
 
-                    <TextBlock Canvas.Left="245" TextWrapping="Wrap" Text="C" Canvas.Top="9"/>
-                    <TextBox x:Name="txtbox_C" Height="23" Canvas.Left="245" TextWrapping="Wrap" Canvas.Top="30" Width="198" 
-                     Text="{Binding Path=C, Mode=TwoWay}" IsReadOnly="True"/>
+                    <TextBlock Canvas.Left="245" TextWrapping="Wrap" Text="Distance" Canvas.Top="133" Visibility="Collapsed"/>
+                    <TextBox x:Name="txtbox_distance" Height="23" Canvas.Left="245" TextWrapping="Wrap" Canvas.Top="154" Width="198"
+                     Text="{Binding Path=Distance, Mode=TwoWay}" IsReadOnly="True" Visibility="Collapsed"/>
 
-                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Distance" Canvas.Top="69"/>
-                    <TextBox x:Name="txtbox_distance" Height="23" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="90" Width="198"
-                     Text="{Binding Path=Distance, Mode=TwoWay}" IsReadOnly="True"/>
-
-                    <TextBlock Canvas.Left="245" TextWrapping="Wrap" Text="Azimuth" Canvas.Top="69"/>
-                    <TextBox x:Name="txtbox_azimuth" Height="23" Canvas.Left="245" TextWrapping="Wrap" Canvas.Top="90" Width="198" 
+                    <TextBlock Canvas.Left="245" TextWrapping="Wrap" Text="Azimuth" Canvas.Top="10"/>
+                    <TextBox x:Name="txtbox_azimuth" Height="23" Canvas.Left="245" TextWrapping="Wrap" Canvas.Top="30" Width="198" 
                      Text="{Binding Path=Azimuth, Mode=TwoWay}"  IsReadOnly="True"/>
-                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Elevation" Canvas.Top="133"/>
-                    <TextBox x:Name="txtbox_elevation" Height="23" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="154" Width="198"
-                        Text="{Binding Elevation, Mode=TwoWay}" IsReadOnly="True"/>
-                    <TextBlock Canvas.Left="245" TextWrapping="Wrap" Text="Slant Range" Canvas.Top="133"/>
-                    <TextBox x:Name="txtbox_slantrange" Height="23" Canvas.Left="245" TextWrapping="Wrap" Canvas.Top="154" Width="198"
+                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Elevation" Canvas.Top="9"/>
+                    <TextBox x:Name="txtbox_elevation" Height="23" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="30" Width="198"
+                        Text="{Binding ElevationTest, Mode=TwoWay}" IsReadOnly="True"/>
+                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Slant Range" Canvas.Top="69"/>
+                    <TextBox x:Name="txtbox_slantrange" Height="23" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="90" Width="198"
                         Text="{Binding SlantRange, Mode=TwoWay}" IsReadOnly="True"/>
                 </Canvas>
             </GroupBox>

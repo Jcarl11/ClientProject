@@ -15,6 +15,7 @@ namespace Calculator
         private double c = 0;
         private double elevation = 0;
         private double slantRange = 0;
+        private string elevationTest = "0";
 
         public Prop()
         {
@@ -116,7 +117,18 @@ namespace Calculator
                 if (elevation != value)
                 {
                     elevation = value;
-                    
+                    ElevationTest = elevation < 0 ? "Not valid" : elevation.ToString();
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public string ElevationTest {
+            get { return elevationTest; }
+            set {
+                if(elevationTest != value)
+                {
+                    elevationTest = value;
                     OnPropertyChanged();
                 }
             }
